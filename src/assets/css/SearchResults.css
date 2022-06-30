@@ -1,0 +1,187 @@
+.searchresult{
+    overflow: hidden;
+    position: relative;
+}
+.handle-side-filter{
+    display: none;
+}
+.main-data{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.filter-data{
+    width: 30%;
+    height: 83vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+.result-data{
+    width: 70%;
+    height: 83vh;
+    overflow: hidden;
+    background-color: #e0dddd;
+}
+.category-filter{
+    width: 100%;
+}
+.category-filter div{
+    height: 30px;
+    width: 170px;
+    margin: .5rem 0;
+    padding: 0.5rem .8rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    color: rgb(49, 47, 47);
+    cursor: pointer;
+}
+.category-filter div:hover{
+    background-color: #f0eeee;
+}
+.split-line{
+    height: 1px;
+    width: 95%;
+    margin: 1rem auto;
+    background-color: rgb(185, 180, 180);
+}
+.price-filter{
+    width: 100%;
+    padding: 0 1rem;
+}
+.main-price{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: right;
+    margin-top: 1rem;
+}
+.main-price h3{
+    font-size: 1.45rem;
+    color: rgb(49, 47, 47);
+    padding-right: 1.2rem;
+}
+.price-angle{
+    font-size: 1.8rem;
+    color: rgb(49, 47, 47);
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: .3s all ease-in-out;
+}
+.rotate-angle{
+    transform: rotate(180deg);
+}
+.price-data{
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+}
+.openPrice{
+    height: 5rem;
+    opacity: 1;
+}
+.price-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.price-inputs input{
+    width: 100px;
+    height: 30px;
+    margin: 1.2rem 1rem;
+    padding: 0 .5rem;
+    outline: none;
+    border: 1px solid #bebbbb;
+    border-radius: 5px;
+}
+.price-inputs input::placeholder{
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.drop-filter{
+    width: 100%;
+    padding: 1rem 3rem;
+    position: relative;
+}
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.drop-angle{
+    font-size: 1.8rem;
+    color: rgb(49, 47, 47);
+    cursor: pointer;
+    transform: rotate(0deg);
+}
+.openDrop{
+    transform: rotate(180deg);
+}
+.dropdown h2{
+    margin: 0 1.5rem;
+}
+.items{
+    width: 100px;
+    position: absolute;
+    top: 39px;
+    background-color: #fff;
+    display: none;
+    padding: .5rem .5rem;
+    z-index: 15;
+    box-shadow: 0px 10px 15px -11px #000000;
+}
+.opendropFilter{  
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+.items .item{
+    height: 2.5rem;
+    font-size: 1.45rem;
+    margin: .5rem 0;
+    padding: .2rem .3rem;
+    cursor: pointer;
+}
+.items .item:hover{
+    background-color: #f0eeee;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 76.5vh;
+}
+@media screen and (max-width: 750px){
+    .result-data{
+        width: 100%;
+    }
+    .filter-data{
+        width: 0;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        box-shadow: 3px 0px 17px -11px #000000;
+    }
+    .open-side-filter{
+        padding-top: 2rem;
+        width: 50%;
+        opacity: 1;
+    }
+    .handle-side-filter{
+        display: inline;
+        position: absolute;
+        top: -28px;
+        left: 25px;
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+}
